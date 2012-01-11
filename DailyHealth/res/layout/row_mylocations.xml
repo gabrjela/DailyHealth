@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="5dip"
+    android:layout_margin="60dip"
+    android:background="@drawable/popup_frame"
+    >
+
+<TextView
+    android:id="@+id/myLocationsItem"
+    android:layout_marginLeft="10dip"
+    android:layout_height="70dip"
+    android:layout_width="wrap_content"
+    style="@style/popupItemTextStyle"
+	android:gravity="center"
+	android:layout_gravity="center"
+	android:textAppearance="?android:attr/textAppearanceSmall"
+	android:textStyle="bold"
+	android:textSize="15dip"
+	android:textColor="#eeeeee"
+    />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nutrLayer"
+          android:title="@string/nutr_layer"
+          android:checkable="true"
+          android:enabled="true"
+          android:checked="true"
+    	  />
+    <item android:id="@+id/fitnessLayer"
+          android:title="@string/fitness_layer"
+          android:checkable="true"
+          android:showAsAction="always"
+          android:checked="true"
+          />
+    <item android:id="@+id/karateLayer"
+          android:title="@string/karate_layer"
+          android:checkable="true"
+          android:checked="true"
+          />
+    <item android:id="@+id/judoLayer"
+          android:title="@string/judo_layer"
+          android:checkable="true"
+          android:checked="true"
+          />
+    <item android:id="@+id/yogaLayer"
+          android:title="@string/yoga_layer"
+          android:checkable="true"
+          android:checked="true"
+          />
+    <item android:id="@+id/wrestLayer"
+          android:title="@string/wrestling_layer"
+          android:checkable="true"
+          android:checked="true"
+          />
+    <item android:id="@+id/all"
+          android:title="@string/unsellect_all"
+          />
+</menu>

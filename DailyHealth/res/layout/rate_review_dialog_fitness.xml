@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dip"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+            
+	<RatingBar
+		android:id="@+id/RatingBar.Overall"
+		android:paddingTop="10dip"
+		android:numStars="5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical|left"
+		style="@android:style/Widget.Holo.Light.RatingBar"
+		android:alpha="1"
+		android:rating="0"
+		android:isIndicator="false"
+		/>
+
+	<TableLayout
+	    android:id="@+id/tableLayout1"
+	    android:paddingTop="15dip"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="right"
+	    android:gravity="center"
+	     >
+
+	    <TableRow
+	        android:id="@+id/tableRow1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        >
+			<RatingBar
+					    android:id="@+id/RatingBar.Vestiary"
+					    android:numStars="5"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:gravity="center_vertical|right"
+						style="@android:style/Widget.Holo.Light.RatingBar"
+						android:alpha="0.8"
+						android:rating="0"
+						android:isIndicator="false"
+						android:scaleX="0.7"
+						android:scaleY="0.7"
+						/>	
+			<TextView
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:text="Vestiary, shower facilities"
+				        android:gravity="left"
+				        android:textAppearance="?android:attr/textAppearanceMedium"
+				        android:textSize="15dip"
+				        />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/tableRow2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	         >
+			
+			<RatingBar
+					    android:id="@+id/RatingBar.Space"
+					    android:numStars="5"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						style="@android:style/Widget.Holo.Light.RatingBar"
+						android:alpha="0.8"
+						android:rating="0"
+						android:isIndicator="false"
+						android:scaleX="0.7"
+						android:scaleY="0.7"
+						android:scaleType="fitXY"						
+						/>	
+			<TextView
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:text="Space"
+				        android:gravity="left"
+				        android:textAppearance="?android:attr/textAppearanceMedium"
+				        android:textSize="15dip"
+				        />	        
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/tableRow3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+			<RatingBar
+					    android:id="@+id/RatingBar.Ambiance"
+					    android:numStars="5"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						style="@android:style/Widget.Holo.Light.RatingBar"
+						android:alpha="0.8"
+						android:rating="0"
+						android:isIndicator="false"
+						android:scaleX="0.7"
+						android:scaleY="0.7"
+						android:scaleType="fitXY"
+						/>	
+			<TextView
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:text="Ambiance"
+				        android:gravity="left"
+				        android:textAppearance="?android:attr/textAppearanceMedium"
+				        android:textSize="15dip"
+				        />			
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/tableRow4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+			<RatingBar
+					    android:id="@+id/RatingBar.Equipment"
+					    android:numStars="5"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						style="@android:style/Widget.Holo.Light.RatingBar"
+						android:alpha="0.8"
+						android:rating="0"
+						android:isIndicator="false"
+						android:scaleX="0.7"
+						android:scaleY="0.7"
+						android:scaleType="fitXY"
+						/>	
+			<TextView
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:text="Equipment"
+				        android:gravity="left"
+				        android:textAppearance="?android:attr/textAppearanceMedium"
+				        android:textSize="15dip"
+				        />			
+	    </TableRow>
+	    
+	    <TableRow
+	        android:id="@+id/tableRow5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+			<RatingBar
+					    android:id="@+id/RatingBar.Hygiene"
+					    android:numStars="5"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						style="@android:style/Widget.Holo.Light.RatingBar"
+						android:alpha="0.8"
+						android:rating="0"
+						android:isIndicator="false"
+						android:scaleX="0.7"
+						android:scaleY="0.7"
+						android:scaleType="fitXY"						
+						/>	
+			<TextView
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:text="Hygiene"
+				        android:gravity="left"
+				        android:textAppearance="?android:attr/textAppearanceMedium"
+				        android:textSize="15dip"
+				        />			
+	    </TableRow>	        
+	</TableLayout>
+
+    <TextView
+        android:paddingTop="10dip"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:text="Post review"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    
+            
+    <EditText
+        android:id="@+id/newReview"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:capitalize="none"
+        android:gravity="fill_horizontal"
+        android:lines="3"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/error"
+        android:paddingTop="40dip"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical|left"
+        android:textColor="@color/blue"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+	<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:paddingTop="20dip"
+		    android:layout_gravity="center"
+		    android:gravity="center"
+	    	>
+    
+		      <Button 
+			        android:id="@+id/ok"
+			        android:layout_height="wrap_content"
+			        android:layout_width="150dip"
+			        android:text="@string/alert_dialog_ok" 
+			        />
+		      
+		      <Button 
+			        android:id="@+id/cancel"
+			        android:layout_height="wrap_content"
+			        android:layout_width="150dip"
+			        android:layout_marginLeft="30dip"
+			        android:text="@string/alert_dialog_cancel" 
+			        />
+    
+	</LinearLayout>
+        
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Daily Health</string>
+    <string name="your_locations">My locations/Points of interest</string>
+    
+    <string name="show_home">Show your home location</string>
+    <string name="set_home">Set your home location</string>
+    <string name="show_work">Show your work location</string>
+    <string name="set_work">Set your work location</string>
+    
+    <string name="show_locations">Show my locations on map</string>
+    <string name="hide_locations">Hide my locations on map</string>
+    <string name="point_location">Point location on map</string>
+    
+    <string name="traffic">Traffic</string>
+    <string name="satellite">Satellite</string>
+    <string name="terrain">Terrain</string>   
+    
+    <string name="point_home_on_map">Point your home location on map</string>
+    <string name="point_work_on_map">Point your work location on map</string>
+    
+    <string name="nutrAdd">Point new nutritionist on map</string>
+    <string name="sportAdd">Point new fitness center on map</string>
+    
+    <string name="auth_error">Username or password not correct</string>
+    <string name="account_chooser">Choose your Google Account for login</string>
+    <string name="account_provider">Please login below if your \nGoogle Account is not listed</string>
+    <string name="account_provider_init">This is the first time you use this aplication. Please provide username and password.</string>
+    <string name="not_implemented">This feature is not yet implemented</string>
+    
+    <string name="notification_text">New updates in Daily Health</string>
+    
+    <string name="nutr_layer">Nutritionists</string>
+    <string name="fitness_layer">Fitness</string>
+    <string name="karate_layer">Karate</string>
+    <string name="judo_layer">Judo</string>
+    <string name="yoga_layer">Yoga</string>
+    <string name="wrestling_layer">Wrestling</string>
+    <string name="sellect_all">Select All</string>
+    <string name="unsellect_all">Unselect All</string>
+    
+    <string name="mylocations_layer">My Locations</string>
+    <string name="mylocation_bubble">My Location</string>
+    <string name="mylocation_tap_bubble">Tap on the icon to set location here</string>
+    <string name="mylocation_remove_tap_bubble">Tap on the icon to remove this location</string>
+    <string name="mylocation_set_bubble">Location set</string>
+    <string name="mylocation_remove_bubble">Location removed</string>
+    
+    <string-array name="my_locations_items">
+        <item >Show my locations on map</item>
+        <item >Set a new location</item>
+        <item >Remove location</item>
+    </string-array>
+    
+	<string name="search_nutr_hint">Search Nutritionist</string>        
+    
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Cancel</string>
+    <string name="review_added">Your review has been added</string>
+	<string name="add_review_error">Please post a review</string>
+	
+    <string name="nutr_added">Nutritionist has been added</string>
+	<string name="add_nutr_error1">Please provide title</string>
+	<string name="add_nutr_error2">Please point location on map</string>
+	<string name="new_nutritionist_bubble">Nutritionist</string>	
+	<string name="new_nutritionist_tap_bubble">Tap on the icon to set location here</string>
+	<string name="new_nutritionist_set_bubble">Location set</string>
+	
+	<string name="fitness_added">Fitness club has been added</string>
+	<string name="karate_added">Karate club has been added</string>
+	<string name="judo_added">Judo club has been added</string>
+	<string name="yoga_added">Yoga club has been added</string>
+	<string name="wrestling_added">Wrestling club has been added</string>
+	
+	
+    <string name="nutr_flipper">Nutrition</string>
+    <string name="fitness_flipper">Fitness</string>
+    <string name="karate_flipper">Karate</string>
+    <string name="judo_flipper">Judo</string>
+    <string name="yoga_flipper">Yoga</string>
+    <string name="wrestling_flipper">Wrestling</string>	    
+        
+    
+
+</resources>

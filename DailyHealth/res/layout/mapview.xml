@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+    
+  	<ro.dailyhealth.maps.CustomMapView android:id="@+id/map"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:apiKey="0WVmhKVIHrEKld8Olot_qDglNI543TSOuq9H0Jw"
+	    android:clickable="true"
+	    android:layout_weight="1"
+	    />
+
+    <TextView
+  	    android:id="@+id/noText"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+		android:layout_marginRight="100dip"
+		android:layout_gravity="right|top"
+		android:gravity="right"
+		android:background="@color/gray"
+		/>
+      
+    
+    <ViewFlipper android:id="@+id/ViewFlipper01" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        
+        <LinearLayout
+		    android:id="@+id/emptyLayout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" />
+        
+        <!-- Nutrition popup -->
+	    <LinearLayout
+		    android:layout_width="400dip"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_marginLeft="20dip"
+		    android:layout_marginTop="20dip"
+		    android:background="@drawable/popup_border"
+		   >
+		    
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	>
+		    	<ViewFlipper android:id="@+id/ViewFlipperNutr" android:layout_width="300dip" android:layout_height="wrap_content">
+				    <TextView
+				        android:layout_marginLeft="20dip"
+				        android:paddingLeft="20dip"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/nutr_layer"
+				        style="@style/popupHeaderTextStyle"
+				        android:gravity="center_vertical"
+				        android:layout_gravity="center_vertical"
+				        />
+				    <SearchView
+			            android:id="@+id/searchViewNutr"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            />
+			    
+			    </ViewFlipper>
+			    
+			    <ImageButton
+			        android:layout_marginLeft="10dip"
+			        android:id="@+id/nutrClose"
+			        android:padding="5dip"
+			        android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+			        android:src="@drawable/ic_menu_search_holo_light"
+			        android:layout_gravity="center_vertical"
+			        android:background="@null"
+			        />
+			    
+		    
+		    </LinearLayout>
+		    
+	        <!-- divider -->
+		    <ImageView
+		        android:id="@+id/line"
+		        android:layout_width="fill_parent"
+			    android:layout_height="2dip"
+			    android:src="@drawable/line"
+			    android:layout_marginLeft="10dip"
+			    android:layout_marginRight="10dip"
+			    android:scaleType="fitXY"
+			    />
+		        
+		    <ListView
+		        android:id="@+id/listView02"
+		        android:layout_margin="10dip"
+			    android:layout_gravity="center|center_vertical"
+			    android:layout_width="match_parent"
+			    android:layout_height="500dip"
+			    android:gravity="center"
+			    android:divider="@drawable/line"
+			    android:dividerHeight="1dip"
+			    android:headerDividersEnabled="true"
+			/> 
+			
+			<ImageButton
+			    android:id="@+id/nutrAdd"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/add2"
+				android:layout_gravity="right"
+				android:layout_marginTop="20dip"
+				android:layout_marginRight="40dip"
+				android:background="@null"
+			/>
+			<TextView 
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dip"
+					android:layout_marginRight="40dip"
+					android:layout_marginBottom="5dip"
+					android:layout_gravity="right"
+					android:gravity="right"
+					android:text="Add"
+					style="@style/popupItemTextStyle"
+					android:textStyle="@null"
+			/>		    
+		    
+		    
+	    </LinearLayout>
+	    
+	        
+	    <!-- Fitness popup -->   
+	    <LinearLayout
+		    android:layout_width="400dip"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_marginLeft="20dip"
+		    android:layout_marginTop="20dip"
+		    android:background="@drawable/popup_border"
+		   >
+		    
+	        <!-- Fitness header -->
+	       	<LinearLayout
+	            android:layout_width="wrap_content"
+		    	android:layout_height="40dip"
+		    	android:orientation="horizontal"
+		    	>
+			    <TextView
+			        android:layout_marginLeft="20dip"
+			        android:paddingLeft="20dip"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Fitness"
+			        style="@style/popupHeaderTextStyle"
+			        android:gravity="center_vertical"
+			        />
+			    <ImageButton
+			        android:layout_marginLeft="200dip"
+			        android:id="@+id/sportsClose"
+			        android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+			        android:src="@drawable/ic_clear_search_api_holo_light"
+			        android:layout_gravity="center_vertical|right"
+			        android:background="@null"
+			        />
+		    
+		    </LinearLayout>
+		    
+	       	<!-- divider -->
+		    <ImageView
+		        android:id="@+id/line"
+		        android:layout_width="fill_parent"
+			    android:layout_height="2dip"
+			    android:src="@drawable/line"
+			    android:layout_marginLeft="10dip"
+			    android:layout_marginRight="10dip"
+			    android:scaleType="fitXY"
+			    />
+		    
+		    <!-- Fitness chooser -->
+		    <GridView 
+		        android:layout_margin="40dip"
+		 	    android:id="@+id/gridView01"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:verticalSpacing="25dip"
+			    android:numColumns="2"
+			    android:horizontalSpacing="70dip"
+			    android:stretchMode="columnWidth"
+			    android:gravity="center"
+			    android:layout_gravity="center_horizontal"
+			/>
+		    
+		    <!-- divider -->
+		    <ImageView
+		        android:id="@+id/bottomLine"
+		        android:layout_width="fill_parent"
+			    android:layout_height="2dip"
+			    android:layout_marginBottom="5dip"
+			    android:src="@drawable/line"
+			    android:layout_marginLeft="10dip"
+			    android:layout_marginRight="10dip"
+			    android:scaleType="fitXY"
+			    />
+		    
+		</LinearLayout>
+		    
+	       	
+	    <!-- Fitness category popup --> 
+		<LinearLayout
+			    android:layout_width="400dip"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:layout_marginLeft="20dip"
+			    android:layout_marginTop="20dip"
+			    android:background="@drawable/popup_border">
+		    
+		        <!-- header -->
+		        <LinearLayout
+		            android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:orientation="horizontal"
+			    	>
+				    <ViewFlipper android:id="@+id/ViewFlipperFitn" android:layout_width="300dip" android:layout_height="wrap_content">
+					    <TextView
+					        android:layout_marginLeft="20dip"
+					        android:paddingLeft="20dip"
+					        android:id="@+id/textViewCategory"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:text="Fitness category"
+					        style="@style/popupHeaderTextStyle"
+					        android:gravity="center_vertical"
+					        android:layout_gravity="center_vertical"
+					        />
+					    <SearchView
+				            android:id="@+id/searchViewFitn"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            />
+				    </ViewFlipper>
+				    
+				   <ImageButton
+				        android:layout_marginLeft="10dip"
+				        android:id="@+id/fitnClose"
+				        android:padding="5dip"
+				        android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content"
+				        android:src="@drawable/ic_menu_search_holo_light"
+				        android:layout_gravity="center_vertical"
+				        android:background="@null"
+				        />
+		    
+		    </LinearLayout>
+			    
+		    
+		        <!-- divider -->
+			    <ImageView
+			        android:id="@+id/line"
+			        android:layout_width="fill_parent"
+				    android:layout_height="2dip"
+				    android:src="@drawable/line"
+				    android:layout_marginLeft="10dip"
+				    android:layout_marginRight="10dip"
+				    android:scaleType="fitXY"
+				    />
+		        
+			    <ListView
+			        android:id="@+id/listView03"
+			        android:layout_margin="10dip"
+				    android:layout_gravity="center|center_vertical"
+				    android:layout_width="match_parent"
+				    android:layout_height="480dip"
+				    android:gravity="center"
+				    android:divider="@drawable/line"
+				    android:dividerHeight="1dip"
+				    android:headerDividersEnabled="true"
+				/>
+			    
+			    <ImageButton
+			        android:id="@+id/sportAdd"
+			        android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/add2"
+				    android:layout_gravity="right"
+				    android:layout_marginTop="20dip"
+				    android:layout_marginRight="40dip"
+				    android:background="@null"
+				    />
+			    
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			    	android:layout_height="match_parent"
+			    	android:orientation="horizontal">
+				    <ImageButton
+				        android:id="@+id/back"
+				        android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:src="@drawable/back3"
+					    android:layout_gravity="left"
+					    android:layout_marginTop="20dip"
+					    android:layout_marginLeft="10dip"
+					    android:background="@null"
+					    />
+				    
+					<TextView 
+					    android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dip"
+						android:layout_marginRight="42dip"
+						android:layout_gravity="right"
+						android:gravity="right"
+						android:text="Add"
+						style="@style/popupItemTextStyle"
+						android:textStyle="@null"
+					    />	
+				</LinearLayout>		    
+		    
+		</LinearLayout>
+	        
+		
+		    
+        <!-- My locations popup -->
+		<LinearLayout
+		    android:layout_width="350dip"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_marginLeft="20dip"
+		    android:layout_marginTop="20dip"
+		    android:background="@drawable/popup_border"
+		   >
+		    
+		    <!-- header -->
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	>
+			    <TextView
+			        android:layout_marginLeft="20dip"
+			        android:paddingLeft="20dip"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="My locations"
+			        style="@style/popupHeaderTextStyle"
+			        android:gravity="center_vertical"
+			        />
+			    <ImageButton
+			        android:id="@+id/myLocationsClose"
+			        android:layout_marginLeft="100dip"
+			        android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+			        android:src="@drawable/ic_clear_search_api_holo_light"
+			        android:layout_gravity="center_vertical"
+			        android:background="@null"
+			        />
+		    
+		    </LinearLayout>
+		    
+	        <!-- divider -->
+		    <ImageView
+		        android:layout_width="fill_parent"
+			    android:layout_height="2dip"
+			    android:src="@drawable/line"
+			    android:layout_marginLeft="10dip"
+			    android:layout_marginRight="10dip"
+			    android:scaleType="fitXY"
+			    android:layout_marginBottom="30dip"
+			    />
+		        
+		    <ListView
+		        android:id="@+id/listView04"
+		        android:layout_margin="10dip"
+			    android:layout_gravity="center|center_vertical"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center"
+			    android:divider="@null"
+			    android:headerDividersEnabled="false"
+			/> 
+			
+		    <!-- divider -->
+		    <ImageView
+		        android:layout_width="fill_parent"
+			    android:layout_height="2dip"
+			    android:src="@drawable/line"
+			    android:layout_marginLeft="10dip"
+			    android:layout_marginRight="10dip"
+			    android:scaleType="fitXY"
+			    android:layout_marginTop="30dip"
+			    />
+			
+	    </LinearLayout>
+	    
+		    
+	    <!-- Nutritionist description popup --> 
+		<LinearLayout
+			    android:layout_width="400dip"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:paddingLeft="10dip"
+			    android:paddingRight="10dip"
+			    android:layout_marginLeft="20dip"
+		    	android:layout_marginTop="20dip"
+			    android:paddingTop="10dip"
+			    android:layout_gravity="top"
+			    android:background="@drawable/popup_border"
+			    
+		        >
+		    
+		        <!-- header -->
+		        <LinearLayout
+		            android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:orientation="horizontal"
+			    	android:layout_gravity="center_vertical"
+			    	>
+			    
+					<ImageView
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    android:src="@drawable/nutr3"
+					    android:gravity="left"
+					    android:layout_gravity="left"
+					    />
+			    	
+				    <TextView
+				        android:layout_marginLeft="5dip"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/nutr_flipper"
+				        style="@style/popupHeaderTextStyle"
+				        android:gravity="left"
+				        />
+
+			    </LinearLayout>
+			    
+		    
+		        <!-- divider -->
+			    <ImageView
+			        android:layout_width="fill_parent"
+				    android:layout_height="2dip"
+				    android:src="@drawable/line"
+				    android:layout_marginLeft="10dip"
+				    android:layout_marginRight="10dip"
+				    android:scaleType="fitXY"
+				    />
+		        
+			    
+				<!-- Title, rating and description -->
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingLeft="20dip"
+				    android:paddingRight="20dip"
+				    android:paddingTop="10dip"
+				    android:orientation="vertical"
+				    android:gravity="left"
+				    android:layout_gravity="top"
+				    >
+					<TextView
+					    android:id="@+id/nutrTitle"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/popupItemTextStyle"
+					    />
+					
+					<TextView
+					    android:id="@+id/nutrAddress"
+					    android:paddingTop="5dip"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    />
+					
+					<TextView
+					    android:id="@+id/nutrPhone"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    />
+					
+					<TextView
+					    android:id="@+id/nutrOpen"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    />					
+										
+					<TextView
+					    android:id="@+id/nutrWeb"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    android:textColor="@color/blue"
+					    />
+													
+					<TextView
+					    android:id="@+id/nutrDescription"
+					    android:paddingLeft="20dip"
+					    android:paddingRight="20dip"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    android:textStyle="italic"
+					    />
+					
+					
+					<RatingBar
+					    android:id="@+id/nutrRatingBar"
+					    android:paddingTop="10dip"
+					    android:numStars="5"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical|left"
+						style="@android:style/Widget.Holo.Light.RatingBar.Small"
+						android:alpha="1"
+						android:rating="0"
+						android:isIndicator="true"
+						/>
+					
+					<!-- Reviews -->
+					<LinearLayout
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="horizontal"
+					    android:paddingTop="3dip"
+					    android:gravity="center_vertical"
+					    >
+					    <TextView
+						    android:id="@+id/no_reviews"
+						    android:layout_height="wrap_content"
+						    android:layout_width="wrap_content"
+						    android:text="0"
+						    android:gravity="left"
+						    android:layout_gravity="left"
+						    android:textAppearance="?android:attr/textAppearanceMedium"
+						    android:textColor="@color/blue"
+						    android:textStyle="bold"
+						    android:textSize="15dip"
+						    />
+					    	
+						<TextView
+						    android:paddingLeft="3dip"
+						    android:layout_height="wrap_content"
+						    android:layout_width="wrap_content"
+						    android:text="Reviews"
+						    android:gravity="left"
+						    android:layout_gravity="left"
+						    android:textAppearance="?android:attr/textAppearanceMedium"
+						    android:textColor="@color/blue"
+						    android:textStyle="bold"
+						    android:textSize="15dip"
+						    />
+					</LinearLayout> 	
+
+				<!-- divider top list-->
+			    <ImageView
+			        android:layout_width="fill_parent"
+				    android:layout_height="2dip"
+				    android:src="@drawable/line"
+				    android:layout_marginLeft="10dip"
+				    android:layout_marginRight="10dip"
+				    android:scaleType="fitXY"
+				    android:paddingTop="2dip"
+				    />
+			    
+				<ListView
+			        android:id="@+id/lv1Reviews"
+			        android:layout_marginTop="10dip"
+				    android:layout_gravity="center|center_vertical"
+				    android:layout_width="match_parent"
+				    android:layout_height="300dip"
+				    android:gravity="center"
+				    android:divider="@drawable/line"
+				    android:dividerHeight="1dip"
+				    android:headerDividersEnabled="true"
+					/> 
+			    
+			    <!-- divider bottom list-->
+			    <ImageView
+			        android:layout_width="fill_parent"
+				    android:layout_height="2dip"
+				    android:src="@drawable/line"
+				    android:layout_marginLeft="10dip"
+				    android:layout_marginRight="10dip"
+				    android:scaleType="fitXY"
+				    android:paddingTop="2dip"
+				    />
+			    
+					    
+			    <ImageButton
+			        android:id="@+id/nutrAddReview"
+			        android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/comment_32"
+				    android:layout_gravity="right"
+				    android:layout_marginTop="5dip"
+				    android:layout_marginRight="20dip"
+				    android:background="@null"
+				    />
+			    
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			    	android:layout_height="match_parent"
+			    	android:orientation="horizontal">
+				    <ImageButton
+				        android:id="@+id/nutrReviewsBack"
+				        android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:src="@drawable/back3"
+					    android:layout_gravity="left"
+					    android:layout_marginTop="20dip"
+					    android:layout_marginLeft="10dip"
+					    android:background="@null"
+					    />
+				    
+					<TextView 
+					    android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dip"
+						android:layout_gravity="right"
+						android:gravity="right"
+						android:text="Add a review"
+						style="@style/popupItemTextStyle"
+						android:textStyle="@null"
+						android:textSize="15dip"
+					    />	
+				</LinearLayout>	
+				
+			</LinearLayout>
+			
+		    
+		</LinearLayout>		    
+	    
+		    
+		    
+		<!-- Fitness category description popup --> 
+		<LinearLayout
+			    android:layout_width="400dip"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:paddingLeft="10dip"
+			    android:paddingRight="10dip"
+			    android:layout_marginLeft="20dip"
+		    	android:layout_marginTop="20dip"
+			    android:paddingTop="10dip"
+			    android:layout_gravity="top"
+			    android:background="@drawable/popup_border"
+			    
+		        >
+		    
+		        <!-- header -->
+		        <LinearLayout
+		            android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:orientation="horizontal"
+			    	android:layout_gravity="center_vertical"
+			    	>
+			    
+					<ImageView
+					    android:id="@+id/Icon.Fitness"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    android:src="@drawable/fitness"
+					    android:gravity="left"
+					    android:layout_gravity="left"
+					    />
+			    	
+				    <TextView
+				        android:id="@+id/Header.Fitness"
+				        android:layout_marginLeft="5dip"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/fitness_flipper"
+				        style="@style/popupHeaderTextStyle"
+				        android:gravity="left"
+				        />
+
+			    </LinearLayout>
+			    
+		    
+		        <!-- divider -->
+			    <ImageView
+			        android:layout_width="fill_parent"
+				    android:layout_height="2dip"
+				    android:src="@drawable/line"
+				    android:layout_marginLeft="10dip"
+				    android:layout_marginRight="10dip"
+				    android:scaleType="fitXY"
+				    />
+		        
+			    
+				<!-- Title, rating and description -->
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingLeft="20dip"
+				    android:paddingRight="20dip"
+				    android:paddingTop="10dip"
+				    android:orientation="vertical"
+				    android:gravity="left"
+				    android:layout_gravity="top"
+				    >
+					<TextView
+					    android:id="@+id/fitnTitle"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/popupItemTextStyle"
+					    />
+					
+					<TextView
+					    android:id="@+id/fitnAddress"
+					    android:paddingTop="5dip"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    />
+					
+					<TextView
+					    android:id="@+id/fitnPhone"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    />
+					
+					<TextView
+					    android:id="@+id/fitnOpen"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    />					
+										
+					<TextView
+					    android:id="@+id/fitnWeb"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    android:textColor="@color/blue"
+					    />
+													
+					<TextView
+					    android:id="@+id/fitnDescription"
+					    android:paddingLeft="20dip"
+					    android:paddingRight="20dip"
+					    android:layout_height="wrap_content"
+					    android:layout_width="wrap_content"
+					    style="@style/itemDescriptionStyle"
+					    android:textStyle="italic"
+					    />
+					
+					
+					<RelativeLayout
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:paddingTop="10dip"
+					    android:gravity="center_vertical"
+					    >
+					
+						<RatingBar
+						    android:id="@+id/fitnRatingBar"
+						    
+						    android:numStars="5"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+							android:layout_gravity="center_vertical|left"
+							style="@android:style/Widget.Holo.Light.RatingBar.Small"
+							android:alpha="1"
+							android:rating="0"
+							android:isIndicator="true"
+							/>
+						
+						<!-- Reviews -->
+						<LinearLayout
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content"
+						    android:orientation="horizontal"
+						    android:paddingTop="3dip"
+						    android:gravity="center_vertical"
+						    android:layout_below="@+id/fitnRatingBar"
+						    >
+						    <TextView
+							    android:id="@+id/fitn_no_reviews"
+							    android:layout_height="wrap_content"
+							    android:layout_width="wrap_content"
+							    android:text="0"
+							    android:gravity="left"
+							    android:layout_gravity="left"
+							    android:textAppearance="?android:attr/textAppearanceMedium"
+							    android:textColor="@color/blue"
+							    android:textStyle="bold"
+							    android:textSize="15dip"
+							    />
+						    	
+							<TextView
+							    android:paddingLeft="3dip"
+							    android:layout_height="wrap_content"
+							    android:layout_width="wrap_content"
+							    android:text="Reviews"
+							    android:gravity="left"
+							    android:layout_gravity="left"
+							    android:textAppearance="?android:attr/textAppearanceMedium"
+							    android:textColor="@color/blue"
+							    android:textStyle="bold"
+							    android:textSize="15dip"
+							    />
+						</LinearLayout>
+						
+						<RatingBar
+						    android:id="@+id/fitnRatingBar1"
+						    android:layout_toRightOf="@+id/fitnRatingBar"
+						    android:layout_marginLeft="10dip"
+						    android:numStars="5"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+							android:layout_gravity="center_vertical|left"
+							style="@android:style/Widget.Holo.Light.RatingBar.Small"
+							android:alpha="1"
+							android:rating="1"
+							android:isIndicator="true"
+							/>
+						
+						<RatingBar
+						    android:id="@+id/fitnRatingBar2"
+						    android:layout_below="@+id/fitnRatingBar1"
+						    android:layout_toRightOf="@+id/fitnRatingBar"
+						    android:numStars="5"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+							android:layout_gravity="center_vertical|left"
+							style="@android:style/Widget.Holo.Light.RatingBar.Small"
+							android:alpha="1"
+							android:rating="2"
+							android:isIndicator="true"
+							/>						
+					
+				</RelativeLayout>
+
+				<!-- divider top list-->
+			    <ImageView
+			        android:layout_width="fill_parent"
+				    android:layout_height="2dip"
+				    android:src="@drawable/line"
+				    android:layout_marginLeft="10dip"
+				    android:layout_marginRight="10dip"
+				    android:scaleType="fitXY"
+				    android:paddingTop="2dip"
+				    />
+			    
+				<ListView
+			        android:id="@+id/lv2Reviews"
+			        android:layout_marginTop="10dip"
+				    android:layout_gravity="center|center_vertical"
+				    android:layout_width="match_parent"
+				    android:layout_height="300dip"
+				    android:gravity="center"
+				    android:divider="@drawable/line"
+				    android:dividerHeight="1dip"
+				    android:headerDividersEnabled="true"
+					/> 
+			    
+			    <!-- divider bottom list-->
+			    <ImageView
+			        android:layout_width="fill_parent"
+				    android:layout_height="2dip"
+				    android:src="@drawable/line"
+				    android:layout_marginLeft="10dip"
+				    android:layout_marginRight="10dip"
+				    android:scaleType="fitXY"
+				    android:paddingTop="2dip"
+				    />
+			    
+					    
+					    
+			    <ImageButton
+			        android:id="@+id/fitnAddReview"
+			        android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/comment_32"
+				    android:layout_gravity="right"
+				    android:layout_marginTop="5dip"
+				    android:layout_marginRight="20dip"
+				    android:background="@null"
+				    />
+			    
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			    	android:layout_height="match_parent"
+			    	android:orientation="horizontal">
+				    <ImageButton
+				        android:id="@+id/fitnReviewsBack"
+				        android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:src="@drawable/back3"
+					    android:layout_gravity="left"
+					    android:layout_marginTop="20dip"
+					    android:layout_marginLeft="10dip"
+					    android:background="@null"
+					    />
+				    
+					<TextView 
+					    android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dip"
+						android:layout_gravity="right"
+						android:gravity="right"
+						android:text="Add a review"
+						style="@style/popupItemTextStyle"
+						android:textStyle="@null"
+						android:textSize="15dip"
+					    />	
+				</LinearLayout>	
+				
+			</LinearLayout>
+			
+		</LinearLayout>
+		    
+		    
+	</ViewFlipper>
+      
+</FrameLayout>
+

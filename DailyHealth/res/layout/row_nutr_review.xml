@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|center_horizontal"
+    android:gravity="top|center_horizontal"
+    >
+<ImageView
+    android:layout_marginTop="5dip"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:src="@drawable/user_16"
+    android:layout_gravity="top"
+    />
+ 
+<!-- Username, date and review -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="top"
+    >
+	<TextView
+	    android:id="@+id/username"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:gravity="top"
+	    android:layout_gravity="top"
+	    style="@style/itemDescriptionStyle"
+	    android:text="username"
+	    />
+	<RatingBar
+	    android:id="@+id/ratingBar"
+	    android:numStars="5"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical|left"
+		style="@android:style/Widget.Holo.Light.RatingBar.Small"
+		android:alpha="1"
+		android:isIndicator="true"
+		/>
+	
+	<TextView
+	    android:id="@+id/review"
+	    android:layout_marginTop="5dip"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:gravity="top"
+	    android:layout_gravity="top"
+	    style="@style/itemDescriptionStyle"
+	    />
+	
+</LinearLayout>
+
+
+</LinearLayout>

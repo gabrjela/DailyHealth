@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nutritionists"
+        android:title="Nutritionists"
+        android:icon="@drawable/nutr3"
+        android:showAsAction="ifRoom|withText" />
+    <item android:id="@+id/fitness"
+        android:icon="@drawable/fitness"
+        android:title="Fitnesss"
+        android:showAsAction="ifRoom|withText" />
+    <item android:id="@+id/layers"
+        android:icon="@drawable/layers_6"
+        android:titleCondensed="Layers"
+        android:showAsAction="always" />    
+    <!-- Example of items in the overflow menu -->
+    <item android:id="@+id/traffic"
+        android:title="Traffic"
+        android:checkable="true"
+        android:showAsAction="never" />
+    <item android:id="@+id/satellite"
+        android:title="Satellite"
+         android:checkable="true"
+        android:showAsAction="never" /> 
+</menu>

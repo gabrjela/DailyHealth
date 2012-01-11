@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|center_horizontal"
+    android:gravity="top|center_horizontal"
+    android:paddingTop="5dip"
+   	android:paddingBottom="5dip"
+    >
+
+<ImageView
+    android:id="@+id/sportcateg_icon"
+    android:layout_marginTop="5dip"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:src="@drawable/fitness"
+    android:layout_gravity="top"
+    />
+ 
+<!-- Title and rating -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dip"
+    android:orientation="vertical"
+    android:layout_gravity="top"
+    >
+	<TextView
+	    android:id="@+id/item"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:gravity="top"
+	    android:layout_gravity="top"
+	    style="@style/popupItemTextStyle"
+	    />
+	<RatingBar
+	    android:id="@+id/ratingBar1"
+	    android:layout_marginTop="3dip"
+	    android:numStars="5"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical|left"
+		style="@android:style/Widget.Holo.Light.RatingBar.Small"
+		android:alpha="1"
+		android:rating="0"
+		/>
+	
+	<TextView
+	    android:id="@+id/itemDescription"
+	    android:layout_marginTop="5dip"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:gravity="top"
+	    android:layout_gravity="top"
+	    style="@style/itemDescriptionStyle"
+	    />
+	
+	
+	<!-- Reviews and more -->
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:paddingTop="3dip"
+	    android:gravity="center_vertical"
+	    >
+		
+	    <TextView
+		    android:id="@+id/no_reviews1"
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:text="0"
+		    android:gravity="left"
+		    android:layout_gravity="left"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:textColor="@color/blue"
+		    android:textStyle="bold"
+		    android:textSize="15dip"
+		    />
+	    	
+		<TextView
+		    android:id="@+id/reviews"
+		    android:paddingLeft="3dip"
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:text="Reviews"
+		    android:gravity="left"
+		    android:layout_gravity="left"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:textColor="@color/blue"
+		    android:textStyle="bold"
+		    android:textSize="15dip"
+		    />
+		
+		<TextView
+		    android:layout_height="wrap_content"
+		    android:layout_width="match_parent"
+		    android:paddingRight="40dip"
+		    android:text="More..."
+		    android:gravity="right"
+		    android:layout_gravity="right"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:textStyle="bold|italic"
+		    android:textColor="@color/beige"
+		    android:textSize="15dip"
+		    />
+	</LinearLayout> 	
+
+</LinearLayout>
+
+</LinearLayout>
+ 

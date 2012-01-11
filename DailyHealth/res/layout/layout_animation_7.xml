@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layoutAnimation="@anim/layout_animation_table"
+    android:animationCache="false"
+    android:clipToPadding="false"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/bkg5"
+    android:orientation="vertical"
+    android:stretchColumns="1">
+
+    <TableRow android:layout_gravity="center" android:clickable="true"
+        android:layoutAnimation="@anim/layout_animation_row_right_slide"> 
+		     <ListView android:id="@+id/listView01"
+			    android:layout_gravity="center|center_vertical"
+			    android:layout_width="400dip"
+			    android:layout_height="wrap_content"
+			    android:background="@null"
+			    android:gravity="left"
+			    style="@style/CustomListViewStyle"
+				/>  
+				
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dip"
+    android:orientation="vertical"
+    android:background="@drawable/popup_frame"
+     >
+
+    <TextView
+        android:id="@+id/bubbleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:textColor="#c2eef3"
+        android:textStyle="bold"
+    />
+    
+
+</LinearLayout>

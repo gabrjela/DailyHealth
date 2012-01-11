@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+<ImageView
+    android:id="@+id/sport_icon"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:src="@drawable/fitness"
+    android:layout_gravity="center"
+    />
+    
+<TextView
+    android:id="@+id/sport_label"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="10dip"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    style="@style/popupItemTextStyle"
+    android:textStyle="@null"
+    android:typeface="sans"
+    android:textSize="20dip"
+    />
+
+</LinearLayout>
