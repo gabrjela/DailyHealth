@@ -1,0 +1,17 @@
+DailyHealth application runs on Android API Level 12
+
+	target=Google Inc.:Google APIs:12
+
+The project is set up to be built by Eclipse.
+
+
+Short description:
+	DailyHealth provides the user information about different types of health centers,
+	with a graphical interface constructed upon a Google map. Most important functionalities
+	exisiting in every map browser application are implemented here as well.
+	
+	
+
+
+
+
