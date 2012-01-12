@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: ro.dailyhealth.MyServer
+Class-Path: dailyhealth_lib/mail.jar dailyhealth_lib/postgresql-9.1-901.jdbc4.jar
