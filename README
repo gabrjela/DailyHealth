@@ -6,9 +6,16 @@ The project is set up to be built by Eclipse.
 
 
 Short description:
-	DailyHealth provides the user information about different types of health centers,
-	with a graphical interface constructed upon a Google map. Most important functionalities
-	exisiting in every map browser application are implemented here as well.
+	DailyHealth provides the user information about different types of health centers,with a graphical interface constructed upon a Google map. Most important functionalities exisiting in every map browser application are implemented here as well.
+
+
+DailyHealth is a client-server application, you can see both two parts commited :
+	DailyHealth android project - the client
+	DBConnection java project   - the server
+Notes for DBconnection prj:
+-it requires the following libs: mail.jar, postgresql-9.1-901.jdbc4.jar
+-modify your prj classpath so that DBConnection points to these two libraries.
+-you can use manifest.mf to create the jar file of DBConnection prj.
 	
 	
 
